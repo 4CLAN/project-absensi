@@ -1,0 +1,171 @@
+<html lang="EN">
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<title>Absensi Siswa</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: rgb(28, 28, 28);
+		}
+        .logo{
+			background: rgb(156, 255, 156);
+			color: White;
+			text-align: center;
+			box-shadow: 0px 0px 10px black;
+		}
+
+		.logo h1{
+			color: white;
+			text-align: center;
+			letter-spacing: 2px;
+			font-family: Cambria;
+			padding: 2px;
+			border-bottom: 2px solid white;
+		}
+
+		.logo a{
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+			letter-spacing: 4px;
+		}
+
+        .panduan{
+            background-color: rgb(32, 32, 32);
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+			border: 1px solid white;
+			color: rgb(226, 226, 226);
+			box-shadow: 0px 5px 5px rgb(0, 0, 0);
+        }
+
+		ul{
+			padding: 20px;
+		}
+
+		li{
+			padding: 2px;
+		}
+
+        .card{
+            background-color: rgb(150, 221, 150);
+            padding: 20px;
+            margin: 50px;
+			margin-bottom: 30px;
+			border:1px solid white;
+            border-radius: 10px;
+			box-shadow: 0px 5px 5px black;
+
+        }
+
+
+		/* Menerapkan tampilan default untuk elemen form */
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		label{
+			margin-bottom: 5px;
+			font-size: 18px;
+			font-family: System-UI;
+		}
+
+		input{
+			border: 1px solid rgb(164, 164, 164);
+			border-radius: 5px;
+			outline: none;
+			width: 95%;
+			height: auto;
+			padding: 5px;
+			font-family: Verdana;
+			font-size: 12px;
+		}
+
+        select{
+            margin-bottom: 30px;
+        }
+
+		input[type="submit"] {
+			padding: 10px;
+            margin-top: 100px;
+			border: 2px solid rgb(255, 255, 255);
+			width: 100%;
+			background-color: #0ccd43;
+			color: rgb(255, 255, 255);
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #12732a;
+		}
+	</style>
+
+</head>
+<body>
+
+    <div class="container">
+		<div class="logo">
+			<h1>ABSENSI SISWA</h1>
+			<a href="#">SMKS PGRI 2 SIDOARJO</a>
+		</div>
+
+        <div class="card">
+	    <form action="submit-absen.php" method="post">
+	      	<label for="nama_lengkap">Nama Lengkap:</label>
+	    	<input type="text" id="nama_lengkap" name="nama_lengkap" required>
+		    <br>
+	    	<label for="absen">Absen:</label>
+	    	<input type="text" id="absen" name="absen" required>
+	    	<br>
+	    	<label for="kelas">Kelas:</label><select id="kelas" name="kelas" required>
+            <option value="">Pilih Kelas:</option>
+            <option value="x" id="10">X</option>
+            <option value="xi" id="11">XI</option>
+            <option value="xii" id="12">XII</option>                       
+            </select>
+
+	    	<label for="jurusan">Jurusan:</label>
+	    	<select id="jurusan" name="jurusan" required>
+			<option value="">Pilih Jurusan</option>
+			<option value="OTKP" id="5514">OTKP</option>
+			<option value="RPL" id="5880">RPL</option>
+			<option value="MM" id="2232">MM</option>
+			<option value="TJKT" id="8068">TJKT</option>
+			<option value="AKL" id="6127">AKL</option>
+	    	</select>
+
+		    <input type="submit" value="Absen" name="submit" id="btn">
+	    </form>
+        </div>
+
+        <div class="panduan">
+            <h1>Panduan Absensi</h1>
+			<br>
+            <p>
+				<ul>
+				<li>Scan QR-Code untuk memasuki form Absensi.</li>
+				<li>Masukan nama lengkap.</li>
+				<li>Masukan nomor absen anda.</li>
+				<li>Pilih kelas sesuai kelas anda.</li>
+				<li>Pilih jurusan sesuai jurusan anda.</li>
+		     	</ul>
+				<br>
+				jika sudah diisi semua tekan tombol <b>absen</b>.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
